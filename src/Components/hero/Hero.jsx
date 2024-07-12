@@ -58,7 +58,7 @@ const Hero = () => {
                 SAIYAM VERMA: Full Stack Web Developer
             </motion.div>
             <div className='imageContainer'>
-                <img src="./hero.png" alt="Saiyam" />
+                <img src="./hero.png" alt="Saiyam" height="2300px"/>
             </div>
         </div >
     )
