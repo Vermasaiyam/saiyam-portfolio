@@ -9,24 +9,28 @@ const items = [
     title: "E-Commerce App",
     img: "./Ecommerce.png",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta neque sed nesciunt corrupti enim iste voluptate aspernatur esse vel! Ducimus.",
+    link: "https://vermasaiyam.github.io/e-commerce/",
   },
   {
     id: 2,
     title: "YouTube App",
     img: "./youtubeApp.png",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta neque sed nesciunt corrupti enim iste voluptate aspernatur esse vel! Ducimus.",
+    link: "https://youtube-black-zeta.vercel.app/",
   },
   {
     id: 3,
     title: "Online Music Player",
     img: "./spotify.png",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta neque sed nesciunt corrupti enim iste voluptate aspernatur esse vel! Ducimus.",
+    link: "https://vermasaiyam.github.io/Spotify-Clone/",
   },
   {
     id: 4,
     title: "Tic Tac Toe",
     img: "./ticTacToe.png",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta neque sed nesciunt corrupti enim iste voluptate aspernatur esse vel! Ducimus.",
+    link: "https://vermasaiyam.github.io/Tic-Tac-Toe/",
   },
 ]
 
@@ -49,7 +53,7 @@ const Single = ({ item }) => {
           <motion.div className="textContainer" style={{y}}>
             <h2 >{item.title}</h2>
             <p>{item.desc}</p>
-            <a href=""><button>See Demo <MdLaunch /></button></a>
+            <a href={item.link} target='blank'><button>See Demo <MdLaunch /></button></a>
           </motion.div>
         </div>
       </div>
