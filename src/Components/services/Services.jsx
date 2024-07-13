@@ -33,7 +33,7 @@ const Services = () => {
     initial="initial" 
     // whileInView="animate"
     ref={ref}
-    animate={isInView && "animate"}
+    animate={"animate"}
     >
       <motion.div className="textContainer" variants={variants}>
         <p>When I'm not coding, you can find me <br /> strategizing my next move in a game of chess.</p>
@@ -52,23 +52,23 @@ const Services = () => {
       <motion.div className="listContainer" variants={variants}>
         <motion.div className="box" whileHover={{backgroundColor: "lightgray", color:"black"}}>
             <h2>Branding</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid sapiente numquam quia reprehenderit ipsum, nisi atque in neque hic sint eos illo dicta iste totam et commodi adipisci culpa delectus!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid sapiente numquam quia reprehenderit ipsum, nisi atque in neque hic !</p>
             <button>Go</button>
         </motion.div>
         <motion.div className="box" whileHover={{backgroundColor: "lightgray", color:"black"}}>
             <h2>Branding</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid sapiente numquam quia reprehenderit ipsum, nisi atque in neque hic sint eos illo dicta iste totam et commodi adipisci culpa delectus!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid sapiente numquam quia reprehenderit ipsum, nisi atque in neque hic !</p>
             
             <button>Go</button>
         </motion.div>
         <motion.div className="box" whileHover={{backgroundColor: "lightgray", color:"black"}}>
             <h2>Branding</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid sapiente numquam quia reprehenderit ipsum, nisi atque in neque hic sint eos illo dicta iste totam et commodi adipisci culpa delectus!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid sapiente numquam quia reprehenderit ipsum, nisi atque in neque hic !</p>
             <button>Go</button>
         </motion.div>
         <motion.div className="box" whileHover={{backgroundColor: "lightgray", color:"black"}}>
             <h2>Branding</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid sapiente numquam quia reprehenderit ipsum, nisi atque in neque hic sint eos illo dicta iste totam et commodi adipisci culpa delectus!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid sapiente numquam quia reprehenderit ipsum, nisi atque in neque hic !</p>
             <button>Go</button>
         </motion.div>
       </motion.div>

@@ -1,3 +1,5 @@
+@import '../../app.scss';
+
 .sidebar{
     display: flex;
     flex-direction: column;
@@ -6,17 +8,21 @@
     background: #0D1D52;
     // background: #0d1d52c4;
     color: white;
-    z-index: 4;
+    z-index: 999;
     
     .bg{
         position: fixed;
         top: 0;
         left: 0;
-        bottom: 0;;
+        bottom: 0;
         width: 400px;
         // background-color: #0D1D52;
         background: #0d1d52f7;
-        z-index: 4;
+        z-index: 999;
+
+        @include mobile{
+            width: 200px;
+        }
 
         .links{
             position: absolute;
@@ -27,11 +33,15 @@
             align-items: center;
             justify-content: center;
             gap: 20px;
-            z-index: 4;
+            z-index: 999;
 
             a{
                 font-size: 27px;
-                z-index: 4;
+                z-index:999;
+
+                @include mobile{
+                    font-size: 15px;
+                }
             }
         }
     }
@@ -46,6 +56,21 @@
         background-color: transparent;
         border: none;
         cursor: pointer;
-        z-index: 4;
+        z-index: 999;
+
+        svg{
+            width: 21px;
+            height: 21px;
+
+            @include mobile{
+                width: 18px;
+                height: 18px;
+            }
+        }
+
+        @include mobile{
+            top: 28px;
+            left: 26px;
+        }
     }
 }

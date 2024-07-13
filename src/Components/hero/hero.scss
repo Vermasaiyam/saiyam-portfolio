@@ -1,3 +1,5 @@
+@import '../../app.scss';
+
 .hero{
     height: calc(100vh - 100px);
     background: linear-gradient(180deg, #0c0c1d, #111132);
@@ -6,28 +8,51 @@
 
     .wrapper{
         max-width: 1366px;
-        height: 90%;
+        height: 85%;
         margin: auto;
-        // z-index: 4;
-
+        z-index: 4;
+        
         .textContainer{
             height: 100%;
             width: 50%;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            gap: 40px;
+            gap: 35px;
+            z-index: 4;
+
+            @include mobile{
+                height: 55%;
+                width: 100%;
+                gap: 18px;
+                align-items: center;
+                text-align: center;
+            }
 
             h2{
                 font-size: 30px;
                 color: rebeccapurple;
                 letter-spacing: 10px;
+                z-index: 4;
+
+                @include mobile{
+                    font-size: 28px;
+                    letter-spacing: 7px;
+                }
+
             }
 
             h1{
                 font-size: 70px;
+                z-index: 4;
+
+                @include mobile{
+                    font-size: 35px;
+                }
             }
             .buttons{
+                z-index: 4;
+
                 button{
                     padding: 15px 20px;
                     border: 1px solid white;
@@ -37,11 +62,26 @@
                     margin-right: 20px;
                     cursor: pointer;
                     font-weight: 300;
+                    z-index: 4;
+
+                    @include mobile{
+                        font-size: 11px;
+                        padding: 10px 15px;
+                    }
                 }
             }
 
-            img{
-                width: 50px;
+            a{
+                z-index: 50;
+                
+                img{
+                    width: 50px;
+                    cursor: pointer;
+
+                    @include mobile{
+                        width: 30px;
+                    }
+                }
             }
         }
     }
@@ -61,5 +101,23 @@
         position: absolute;
         top: 0;
         right: -100px;
+
+        img{
+            height: 2300px;
+            width: 100%;
+            object-fit: cover;
+
+            @include mobile{
+                height: 1100px;
+            }
+        }
+
+        @include mobile{
+            height: 50%;
+            width: 100%;
+            top: unset;
+            bottom: 0;
+            right: 0;
+        }
     }
 }
