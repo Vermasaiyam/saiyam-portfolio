@@ -121,12 +121,12 @@
             height: 30%;
             width: 100%;
         }
-        ::-webkit-scrollbar {
-            // width: 2px;
-            display: none;
+        &::-webkit-scrollbar {
+            background-color: transparent;
+            height: 2px;
         }
-        ::-webkit-scrollbar-thumb {
-            display: none;
+        &::-webkit-scrollbar-thumb {
+            background-color: #c7c7c7;
         }
         
 
