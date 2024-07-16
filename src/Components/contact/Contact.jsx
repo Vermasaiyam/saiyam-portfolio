@@ -19,24 +19,24 @@ const variants = {
 }
 const textVariants = {
   initial: {
-      x: -500,
-      opacity: 0,
+    x: -500,
+    opacity: 0,
   },
   animate: {
-      x: 0,
-      opacity: 1,
-      transition: {
-          duration: 1,
-          staggerChildren: 0.1,
-      },
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      staggerChildren: 0.1,
+    },
   },
   scrollButton: {
-      opacity: 0,
-      y: 10,
-      transition: {
-          duration: 2,
-          repeat: Infinity,
-      },
+    opacity: 0,
+    y: 10,
+    transition: {
+      duration: 2,
+      repeat: Infinity,
+    },
   },
 }
 
@@ -73,15 +73,18 @@ const Contact = () => {
           <motion.h1 variants={variants}>Let's Work Together</motion.h1>
           <motion.div variants={variants} className="item">
             <h2>E-mail</h2>
-            <a href="mailto:saiyam258verma@gmail.com"><span>saiyam258verma@gmail.com</span></a>
+            <a href="mailto:saiyam258verma@gmail.com" target='_blank'><span>saiyam258verma@gmail.com</span></a>
           </motion.div>
           <motion.div variants={variants} className="item">
             <h2>Address</h2>
-            <span>1958, Master Colony, Brahmpuri, Meerut, Uttar Pradesh</span>
+            <a href="https://www.google.com/maps/search/?api=1&query=gali+number+4+master+colony+brahmpuri+meerut" target="_blank">
+              <span>1958, Master Colony, Brahmpuri, Meerut, Uttar Pradesh</span>
+            </a>
+
           </motion.div>
           <motion.div variants={variants} className="item">
             <h2>Phone</h2>
-            <a href="tel:+917251859585">
+            <a href="tel:+917251859585" target='_blank'>
               <span>+91 7251859585</span>
             </a>
           </motion.div>
@@ -106,9 +109,9 @@ const Contact = () => {
         </div>
       </motion.div>
       <div className="scrollUp">
-         <a href="#Home">
-           <motion.img src="./scroll.png" alt="Scroll Up" variants={textVariants} animate="scrollButton" />
-         </a>
+        <a href="#Home">
+          <motion.img src="./scroll.png" alt="Scroll Up" variants={textVariants} animate="scrollButton" />
+        </a>
       </div>
     </div>
   )
