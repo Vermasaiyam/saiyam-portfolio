@@ -73,6 +73,43 @@
                 flex-direction: column;
                 gap: 30px;
 
+                .tech {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    gap: 20px;
+
+                    .techItem {
+                        background-color: rgba(112, 128, 144, 0.282);
+                        padding: 8px 18px;
+                        border-top-left-radius: 20px;
+                        border-top-right-radius: 20px;
+                        border-bottom-left-radius: 20px;
+                        border-bottom-right-radius: 0;
+                        animation: flicker 5s infinite alternate;
+                    }
+
+                    @keyframes flicker {
+                        0% {
+                            opacity: 1;
+                        }
+
+                        50% {
+                            opacity: 0.4;
+                        }
+
+                        100% {
+                            opacity: 1;
+                        }
+                    }
+                }
+
+                .buttons {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                }
+
                 @include mobile {
                     transform: none !important;
                     gap: 20px;
@@ -98,6 +135,7 @@
 
                 a {
                     z-index: 800;
+
                     button {
                         background-color: orange;
                         border: none;
