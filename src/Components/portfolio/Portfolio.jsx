@@ -82,7 +82,10 @@ const Single = ({ item }) => {
             <div className="tech">
               {
                 (item.technologies).map(tech => (
-                  <div className="techItem" key={tech}>{tech}</div>
+                  <div className="techItem" key={tech}>
+                    {/* <img src={`./${tech}.svg`} alt={tech} /> */}
+                    {tech}
+                  </div>
                 ))
               }
             </div>
