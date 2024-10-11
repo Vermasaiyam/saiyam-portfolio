@@ -47,7 +47,7 @@ const Hero = () => {
                     <motion.h1 variants={textVariants}>Full Stack Web Developer</motion.h1>
                     <motion.div className="buttons" variants={textVariants}>
                         <a href="#Portfolio">
-                        <motion.button variants={textVariants}>Latest Works</motion.button>
+                        <motion.button variants={textVariants}>My Works</motion.button>
                         </a>
                         <a href="#Contact">
                             <motion.button variants={textVariants}>Contact Me</motion.button>
@@ -62,7 +62,7 @@ const Hero = () => {
                 SAIYAM VERMA: Full Stack Web Developer
             </motion.div>
             <div className='imageContainer'>
-                <img src="./hero.png" alt="Saiyam" />
+                <img src="./hero.png" alt="Saiyam Verma" />
             </div>
         </div >
     )
