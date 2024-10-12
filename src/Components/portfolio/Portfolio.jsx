@@ -90,7 +90,7 @@ const Single = ({ item }) => {
               }
             </div>
             <div className="buttons">
-              <a href={item.link} target='blank'><button>See Code<b>&lt; &gt;</b></button></a>
+              <a href={item.code} target='blank'><button>See Code<b>&lt; &gt;</b></button></a>
               <a href={item.link} target='blank'><button>Watch Live <MdLaunch /></button></a>
             </div>
           </motion.div>
