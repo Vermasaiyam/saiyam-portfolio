@@ -79,6 +79,10 @@
                     flex-wrap: wrap;
                     gap: 20px;
 
+                    @include mobile {
+                        gap: 8px;
+                    }
+
                     .techItem {
                         background-color: rgba(112, 128, 144, 0.282);
                         padding: 8px 18px;
@@ -87,6 +91,11 @@
                         border-bottom-left-radius: 20px;
                         border-bottom-right-radius: 0;
                         animation: flicker 5s infinite alternate;
+
+                        @include mobile {
+                            padding: 5px 8px;
+                            font-size: x-small;
+                        }
                     }
 
                     @keyframes flicker {
@@ -114,6 +123,8 @@
                     transform: none !important;
                     gap: 20px;
                     width: 90vw;
+                    // doubtful line
+                    margin-top: -40px;
                 }
 
                 h2 {
