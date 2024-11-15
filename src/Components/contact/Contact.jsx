@@ -42,6 +42,22 @@ const textVariants = {
 
 const Contact = () => {
 
+  const [input, setInput] = useState({
+    name: "",
+    email: "",
+    message: "",
+  })
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setInput(prev => ({
+      ...prev,
+      [name]: value,
+    }))
+  }
+
+
+
   const ref = useRef();
   const formRef = useRef();
   const [error, setError] = useState(null);
@@ -53,15 +69,25 @@ const Contact = () => {
     e.preventDefault();
 
     emailjs
-      .sendForm('service_fybzlco', 'template_wh4vm0k', formRef.current, {
-        publicKey: 'us4Lew2WkODTP7_SC',
+      .sendForm('service_u54qswc', 'template_1bpsmat', formRef.current, {
+        publicKey: '7_p5mqubFIc_4t8gK',
       })
       .then(
         (result) => {
           setSuccess(true);
+          setInput({
+            name: "",
+            email: "",
+            message: "",
+          });
         },
         (error) => {
           setError(true);
+          setInput({
+            name: "",
+            email: "",
+            message: "",
+          });
         },
       );
   };
@@ -99,12 +125,12 @@ const Contact = () => {
           </motion.div>
 
           <motion.form onSubmit={sendEmail} ref={formRef} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ delay: 4, duration: 1 }}>
-            <input type="text" placeholder='Name' name='name' required />
-            <input type="email" placeholder='Email' name='email' required />
-            <textarea rows={8} placeholder='Message...' name='message' />
+            <input type="text" placeholder='Name' name='name' value={input.name} onChange={handleChange} required />
+            <input type="email" placeholder='Email' name='email' value={input.email} onChange={handleChange} required />
+            <textarea rows={8} placeholder='Message...' name='message' value={input.message} onChange={handleChange} required />
             <button>Submit</button>
-            {error && "Error"}
-            {success && "Success"}
+            {error && "Error while sending the message."}
+            {success && "Message Sent Successfully."}
           </motion.form>
         </div>
       </motion.div>
