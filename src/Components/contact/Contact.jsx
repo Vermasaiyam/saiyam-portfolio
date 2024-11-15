@@ -63,14 +63,18 @@ const Contact = () => {
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(null);
 
+  const serviceId = import.meta.env.VITE_SERVICE_ID;
+  const templateId = import.meta.env.VITE_SERVICE_ID;
+  const publicKey = import.meta.env.VITE_SERVICE_ID;
+
   const isInView = useInView(ref, { margin: "-100px" });
 
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs
-      .sendForm('service_u54qswc', 'template_1bpsmat', formRef.current, {
-        publicKey: '7_p5mqubFIc_4t8gK',
+      .sendForm(serviceId, templateId, formRef.current, {
+        publicKey: publicKey,
       })
       .then(
         (result) => {
