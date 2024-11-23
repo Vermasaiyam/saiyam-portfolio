@@ -45,7 +45,7 @@ const items = [
     title: "YouTube App",
     img: "./youtubeApp.png",
     desc: "Built a YouTube-like web application using React and Redux for state management, with API integration to fetch and display video content. The app allows users to search for videos, watch them, view related videos, and manage a watch history. Implemented efficient global state handling with Redux to manage video lists, user actions, and loading states, ensuring a smooth and responsive user experience. The app is fully responsive and optimized for both desktop and mobile devices.",
-    link: "https://youtube-black-zeta.vercel.app/",
+    link: "https://you-tubes-clone.vercel.app/",
     code: "https://github.com/Vermasaiyam/youtube",
     technologies: ["TailwindCSS", "React", "Redux"],
   },
