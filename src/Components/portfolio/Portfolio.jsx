@@ -18,7 +18,7 @@ const items = [
     title: "ChatterBox",
     img: "./ChatterBox.png",
     desc: "A social media platform developed using the MERN stack and Redux, designed for seamless chatting and user interaction. Key features include the ability to follow/unfollow users, upload and interact with posts through likes and comments, edit profiles, and receive real-time notifications. Users can also bookmark posts for later viewing. ChatterBox offers a smooth, dynamic experience for social engagement.",
-    link: "https://chat-tap.onrender.com/",
+    link: "https://chatterbox-aaxc.onrender.com/login",
     code: "https://github.com/Vermasaiyam/ChatterBox",
     technologies: ["TailwindCSS", "React", "Node.js", "Express.js", "MongoDB"],
   },
@@ -28,7 +28,7 @@ const items = [
     img: "./ChatTap.png",
     desc: "Developed a full-featured real-time chat application using the MERN stack. The app includes user authentication (with JWT), real-time one-on-one and group chats using Socket.io, and additional features like dark mode for an enhanced user experience. Designed with a responsive UI, the app offers seamless navigation, message notifications, and chat history. Built with a focus on performance and scalability, it's optimized for both desktop and mobile devices.",
     link: "https://chat-tap.onrender.com/",
-    code: "https://github.com/Vermasaiyam/Cartify",
+    code: "https://github.com/Vermasaiyam/ChatTap",
     technologies: ["Chakra UI", "React", "Node.js", "Express.js", "MongoDB"],
   },
   {
