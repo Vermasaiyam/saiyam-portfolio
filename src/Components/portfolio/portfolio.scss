@@ -47,7 +47,6 @@
 
             @include mobile {
                 flex-direction: column;
-                // justify-content: center;
                 gap: 0px;
             }
 
@@ -126,11 +125,12 @@
                     // doubtful line
                     margin-top: -40px;
                 }
-
+                
                 h2 {
                     font-size: 60px;
-
+                    
                     @include mobile {
+                        margin-top: -20px;
                         font-size: 32px;
                     }
                 }

@@ -6,50 +6,51 @@ import { MdLaunch } from "react-icons/md";
 const items = [
   {
     id: 1,
-    title: "Cartiify - E-Commerce Platform",
+    title: "QuizLab",
+    img: "./QuizLab.png",
+    desc: "QuizLab transforms YouTube videos into interactive learning experiences by transcribing audio, summarizing content, and creating quizzes for users to earn tokens.",
+    link: "https://quizlab.onrender.com/",
+    code: "https://github.com/Vermasaiyam/quizlab",
+    technologies: ["TailwindCSS", "ReactJS", "Node.js", "Express.js", "MongoDB", "Flask", "Whisper AI", "Groq AI"],
+  },
+  {
+    id: 2,
+    title: "PhotoAI",
+    img: "./PhotoAI.png",
+    desc: "PhotoAI allows users to create folders to upload and share event pictures, with face recognition and permission-based access for viewing photos.",
+    link: false,
+    code: "https://github.com/Vermasaiyam/PhotoAI-MIET",
+    technologies: ["TailwindCSS", "ReactJS", "Node.js", "Express.js", "MongoDB", "Flask", "Face Recognition"],
+  },
+  {
+    id: 3,
+    title: "Cartiify",
     img: "./Ecommerce.png",
-    desc: "Cartiify is a versatile e-commerce platform offering a seamless shopping experience and powerful administrative tools. Users can explore featured products, browse category-based and brand-specific collections, add favorites, rate and review items, and manage their carts and checkout. The admin dashboard provides graphical insights for efficient management of products, categories, brands, admin roles, and order statuses. With streamlined inventory and user management, Cartiify combines user-centric design with robust administrative features for a complete e-commerce solution.",
+    desc: "Cartiify is an e-commerce platform that offers a seamless shopping experience with features like product browsing, reviews, favorites, and an admin dashboard for managing products, categories, and orders.",
     link: "https://cartiify.vercel.app/",
     code: "https://github.com/Vermasaiyam/Cartiify",
     technologies: ["Next.js", "Firebase", "Cloudinary", "Tailwind CSS"],
   },
   {
-    id: 2,
-    title: "Feasto - Food Ordering Platform",
+    id: 4,
+    title: "Feasto",
     img: "./Feasto.png",
-    desc: "Feasto is a feature-rich food ordering platform built with the MERN stack, offering a seamless experience for users and restaurant owners. It includes OTP-based authentication, menu management, food item favorites, and Stripe payment integration. Users can explore restaurants, order food, and search for items, while restaurant owners can manage their menus and orders. With a user hierarchy system and a focus on efficiency, Feasto blends functionality with intuitive design to elevate the food ordering experience.",
+    desc: "Feasto is a food ordering platform built with the MERN stack, offering OTP-based authentication, menu management, Stripe payment integration, and a user hierarchy system for both users and restaurant owners.",
     link: "https://feasto-3uh7.onrender.com/",
     code: "https://github.com/Vermasaiyam/Feasto/",
     technologies: ["TailwindCSS", "Typescript", "ReactJS", "Node.js", "Express.js", "MongoDB"],
   },
   {
-    id: 3,
+    id: 5,
     title: "ChatterBox",
     img: "./ChatterBox.png",
-    desc: "A social media platform developed using the MERN stack and Redux, designed for seamless chatting and user interaction. Key features include the ability to follow/unfollow users, upload and interact with posts through likes and comments, edit profiles, and receive real-time notifications. Users can also bookmark posts for later viewing. ChatterBox offers a smooth, dynamic experience for social engagement.",
+    desc: "ChatterBox is a social media platform with features like following users, interacting with posts, and real-time notifications. Built with the MERN stack and Redux for seamless user interaction.",
     link: "https://chatterbox-aaxc.onrender.com/login",
     code: "https://github.com/Vermasaiyam/ChatterBox",
     technologies: ["TailwindCSS", "ReactJS", "Node.js", "Express.js", "MongoDB"],
   },
-  {
-    id: 4,
-    title: "Chat-Tap",
-    img: "./ChatTap.png",
-    desc: "Developed a full-featured real-time chat application using the MERN stack. The app includes user authentication (with JWT), real-time one-on-one and group chats using Socket.io, and additional features like dark mode for an enhanced user experience. Designed with a responsive UI, the app offers seamless navigation, message notifications, and chat history. Built with a focus on performance and scalability, it's optimized for both desktop and mobile devices.",
-    link: "https://chat-tap.onrender.com/",
-    code: "https://github.com/Vermasaiyam/ChatTap",
-    technologies: ["Chakra UI", "ReactJS", "Node.js", "Express.js", "MongoDB"],
-  },
-  {
-    id: 5,
-    title: "YouTube App",
-    img: "./youtubeApp.png",
-    desc: "Built a YouTube-like web application using React and Redux for state management, with API integration to fetch and display video content. The app allows users to search for videos, watch them, view related videos, and manage a watch history. Implemented efficient global state handling with Redux to manage video lists, user actions, and loading states, ensuring a smooth and responsive user experience. The app is fully responsive and optimized for both desktop and mobile devices.",
-    link: "https://you-tubes-clone.vercel.app/",
-    code: "https://github.com/Vermasaiyam/youtube",
-    technologies: ["TailwindCSS", "ReactJS", "Redux"],
-  },
-]
+];
+
 
 const Single = ({ item }) => {
   const ref = useRef();
@@ -81,7 +82,11 @@ const Single = ({ item }) => {
             </div>
             <div className="buttons">
               <a href={item.code} target='blank'><button>See Code<b>&lt; &gt;</b></button></a>
-              <a href={item.link} target='blank'><button>Watch Live <MdLaunch /></button></a>
+              {
+                item?.link && (
+                  <a href={item?.link} target='blank'><button>Watch Live <MdLaunch /></button></a>
+                )
+              }
             </div>
           </motion.div>
         </div>
