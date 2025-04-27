@@ -5,32 +5,30 @@ import Hero from './Components/hero/Hero';
 import Navbar from './Components/navbar/Navbar';
 import Parallax from './Components/parallax/Parallax';
 import Portfolio from './Components/portfolio/Portfolio';
-import Services from './Components/services/Services';
-import Test from './Test';
+import AboutMe from './Components/aboutMe/AboutMe';
 
 const App = () => {
   return (
     <div>
-      <Cursor/>
+      <Cursor />
       <section id='Home'>
         <Navbar />
         <Hero />
       </section>
-      
-      {/* <section id='Services'>
-        <Parallax type="services"/>
+
+      <section id='About'>
+        <Parallax type="about" />
       </section>
       <section>
-        <Services/>
-      </section> */}
-      <section id='Portfolio'>
+        <AboutMe />
+      </section>
+      <section id='Projects'>
         <Parallax type="portfolio" />
       </section>
-      <Portfolio/>
+      <Portfolio />
       <section id='Contact'>
-        <Contact/>
+        <Contact />
       </section>
-      {/* <Test/> */}
     </div>
   );
 };

@@ -29,7 +29,6 @@ const Links = () => {
 
     const items = [
         "Home",
-        // "Services",
         "About",
         "Projects",
         "Contact",
