@@ -102,7 +102,7 @@
 
 .aboutMe-right {
   flex: 1;
-  height: 82vh;
+  height: 78vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -131,7 +131,8 @@
     min-height: 100vh;
   }
   .aboutMe-right {
-    display: none;
+    height: 30vh;
+    margin: auto;
   }
   .animated-gradient {
     padding: 1.2rem 0.7rem;
