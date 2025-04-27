@@ -14,15 +14,15 @@ const AboutMe = () => {
           <FiArrowUpRight />
         </a>
         <div className="aboutMe-skills">
-          <div className="aboutMe-skill"><img src="./public/skills/javascript.png" alt="JavaScript" /> JavaScript</div>
-          <div className="aboutMe-skill"><img src="./public/skills/typescript.png" alt="TypeScript" /> TypeScript</div>
-          <div className="aboutMe-skill"><img src="./public/skills/react.png" alt="React" /> React</div>
-          <div className="aboutMe-skill"><img src="./public/skills/next.png" alt="Next.js" /> Next.js</div>
-          <div className="aboutMe-skill"><img src="./public/skills/node.png" alt="Node.js" /> Node.js</div>
-          <div className="aboutMe-skill"><img src="./public/skills/mongodb.png" alt="MongoDB" /> MongoDB</div>
-          <div className="aboutMe-skill"><img src="./public/skills/python.png" alt="Python" /> Python</div>
-          <div className="aboutMe-skill"><img src="./public/skills/tailwind.png" alt="TailwindCSS" /> TailwindCSS</div>
-          <div className="aboutMe-skill"><img src="./public/skills/scss.png" alt="CSS/SASS" /> CSS/SASS</div>
+          <div className="aboutMe-skill"><img src="./skills/javascript.png" alt="JavaScript" /> JavaScript</div>
+          <div className="aboutMe-skill"><img src="./skills/typescript.png" alt="TypeScript" /> TypeScript</div>
+          <div className="aboutMe-skill"><img src="./skills/react.png" alt="React" /> React</div>
+          <div className="aboutMe-skill"><img src="./skills/next.png" alt="Next.js" /> Next.js</div>
+          <div className="aboutMe-skill"><img src="./skills/node.png" alt="Node.js" /> Node.js</div>
+          <div className="aboutMe-skill"><img src="./skills/mongodb.png" alt="MongoDB" /> MongoDB</div>
+          <div className="aboutMe-skill"><img src="./skills/python.png" alt="Python" /> Python</div>
+          <div className="aboutMe-skill"><img src="./skills/tailwind.png" alt="TailwindCSS" /> TailwindCSS</div>
+          <div className="aboutMe-skill"><img src="./skills/scss.png" alt="CSS/SASS" /> CSS/SASS</div>
         </div>
       </div>
       <div className="aboutMe-right">
