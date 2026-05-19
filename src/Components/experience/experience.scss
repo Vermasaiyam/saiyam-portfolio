@@ -1,0 +1,318 @@
+@import '../../app.scss';
+
+@keyframes gradientFlow {
+  0%   { background-position: 0% 100%; }
+  100% { background-position: 100% 0%; }
+}
+
+@keyframes flicker {
+  0%   { opacity: 1; }
+  50%  { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+@keyframes pulseBorder {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.4); }
+  50%       { box-shadow: 0 0 0 8px rgba(74, 222, 128, 0); }
+}
+
+.experience {
+  position: relative;
+
+  .exp-progress {
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding-top: 50px;
+    text-align: center;
+    color: orange;
+    font-size: 30px;
+    z-index: 10;
+
+    @include mobile {
+      padding-top: calc(100vh - 80px);
+      font-size: 20px;
+    }
+
+    .exp-progressBar {
+      height: 7px;
+      background-color: white;
+      transform-origin: left;
+
+      @include mobile {
+        height: 4px;
+      }
+    }
+  }
+
+  .exp-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    .exp-wrapper {
+      max-width: 1366px;
+      width: 100%;
+      height: 100%;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 60px;
+      padding: 0 3rem;
+
+      @include tablet {
+        gap: 36px;
+        padding: 0 2rem;
+      }
+
+      @include mobile {
+        flex-direction: column;
+        gap: 20px;
+        padding: 1.5rem 1rem;
+        justify-content: center;
+      }
+
+      // ── Left: Company Card ──────────────────────────────────────────────
+      .companyCard {
+        flex: 0 0 300px;
+        background: linear-gradient(135deg, #0a183d 0%, #1e3a8a 50%, #3b82f6 100%);
+        background-size: 200% 200%;
+        animation: gradientFlow 4s linear infinite;
+        border-radius: 2rem;
+        padding: 2.5rem 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.2rem;
+        box-shadow: 0 8px 40px 0 rgba(31, 38, 135, 0.45);
+
+        @include tablet {
+          flex: 0 0 240px;
+          padding: 2rem 1.5rem;
+        }
+
+        @include mobile {
+          width: 85vw;
+          flex: unset;
+          padding: 1.5rem 1.2rem;
+          gap: 0.8rem;
+          border-radius: 1.4rem;
+        }
+
+        .companyInitial {
+          width: 80px;
+          height: 80px;
+          background: rgba(255, 255, 255, 0.15);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 2.5rem;
+          font-weight: 700;
+          color: #fff;
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+          border: 2px solid rgba(255, 255, 255, 0.2);
+
+          @include mobile {
+            width: 56px;
+            height: 56px;
+            font-size: 1.8rem;
+          }
+        }
+
+        .companyName {
+          font-size: 1.55rem;
+          font-weight: 700;
+          color: #e3e6f3;
+          text-align: center;
+          letter-spacing: 0.5px;
+
+          @include mobile {
+            font-size: 1.2rem;
+          }
+        }
+
+        .durationBadge {
+          background: rgba(255, 255, 255, 0.1);
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          border-radius: 0.7rem;
+          padding: 0.5rem 1.1rem;
+          text-align: center;
+
+          .durationText {
+            font-size: 0.88rem;
+            color: #c7d0e0;
+            font-weight: 500;
+            white-space: nowrap;
+
+            @include mobile {
+              font-size: 0.78rem;
+            }
+          }
+        }
+
+        .currentBadge {
+          background: rgba(34, 197, 94, 0.15);
+          color: #4ade80;
+          border: 1px solid rgba(74, 222, 128, 0.35);
+          border-radius: 2rem;
+          padding: 0.32rem 1.1rem;
+          font-size: 0.84rem;
+          font-weight: 600;
+          letter-spacing: 0.4px;
+          animation: pulseBorder 2.5s infinite;
+
+          @include mobile {
+            font-size: 0.74rem;
+          }
+        }
+
+        .periodChip {
+          background: rgba(255, 140, 0, 0.15);
+          color: orange;
+          border: 1px solid rgba(255, 140, 0, 0.3);
+          border-radius: 2rem;
+          padding: 0.28rem 1.1rem;
+          font-size: 0.85rem;
+          font-weight: 600;
+        }
+
+        .visitBtn {
+          display: flex;
+          align-items: center;
+          gap: 0.45rem;
+          background: orange;
+          color: #000;
+          font-weight: 600;
+          padding: 0.55rem 1.3rem;
+          border-radius: 0.7rem;
+          font-size: 0.95rem;
+          text-decoration: none;
+          transition: background 0.2s, transform 0.15s;
+          cursor: pointer;
+
+          &:hover {
+            background: #ffad33;
+            transform: translateY(-2px);
+          }
+
+          @include mobile {
+            font-size: 0.82rem;
+            padding: 0.42rem 1rem;
+          }
+        }
+      }
+
+      // ── Right: Job Details ──────────────────────────────────────────────
+      .jobDetails {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        max-width: 680px;
+
+        @include mobile {
+          transform: none !important;
+          width: 85vw;
+          gap: 1rem;
+          max-width: 100%;
+        }
+
+        .roleHeader {
+          display: flex;
+          align-items: center;
+          gap: 0.9rem;
+
+          .roleIcon {
+            color: orange;
+            font-size: 1.9rem;
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+
+            @include mobile {
+              font-size: 1.35rem;
+            }
+          }
+
+          .roleTitle {
+            font-size: 2.6rem;
+            font-weight: 700;
+            color: #fff;
+            line-height: 1.15;
+
+            @include mobile {
+              font-size: 1.45rem;
+            }
+          }
+        }
+
+        .jobDesc {
+          font-size: 1.05rem;
+          color: #9ca3af;
+          line-height: 1.75;
+
+          @include mobile {
+            font-size: 0.88rem;
+          }
+        }
+
+        .bulletList {
+          list-style: none;
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+          gap: 0.65rem;
+
+          li {
+            font-size: 0.95rem;
+            color: #c7d0e0;
+            padding-left: 1.3rem;
+            position: relative;
+            line-height: 1.55;
+
+            &::before {
+              content: "▸";
+              position: absolute;
+              left: 0;
+              color: orange;
+              font-size: 0.85rem;
+              top: 1px;
+            }
+
+            @include mobile {
+              font-size: 0.82rem;
+            }
+          }
+        }
+
+        .skillsRow {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.55rem 0.75rem;
+
+          .skillChip {
+            background-color: rgba(112, 128, 144, 0.282);
+            padding: 8px 18px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 0;
+            font-size: 0.88rem;
+            color: #e3e6f3;
+            animation: flicker 5s infinite alternate;
+
+            @include mobile {
+              padding: 5px 8px;
+              font-size: x-small;
+            }
+          }
+        }
+      }
+    }
+  }
+}

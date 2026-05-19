@@ -6,6 +6,7 @@ import Navbar from './Components/navbar/Navbar';
 import Parallax from './Components/parallax/Parallax';
 import Portfolio from './Components/portfolio/Portfolio';
 import AboutMe from './Components/aboutMe/AboutMe';
+import Experience from './Components/experience/Experience';
 
 const App = () => {
   return (
@@ -22,6 +23,10 @@ const App = () => {
       <section>
         <AboutMe />
       </section>
+      <section id='Experience'>
+        <Parallax type="experience" />
+      </section>
+      <Experience />
       <section id='Projects'>
         <Parallax type="portfolio" />
       </section>
