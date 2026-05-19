@@ -14,23 +14,23 @@ const AboutMe = () => {
           <FiArrowUpRight />
         </a>
         <div className="aboutMe-skills">
-          <div className="aboutMe-skill"><img src="./skills/javascript.png" alt="JavaScript" /> JavaScript</div>
-          <div className="aboutMe-skill"><img src="./skills/typescript.png" alt="TypeScript" /> TypeScript</div>
           <div className="aboutMe-skill"><img src="./skills/react.png" alt="React" /> React</div>
+          <div className="aboutMe-skill"><img src="./skills/typescript.png" alt="TypeScript" /> TypeScript</div>
           <div className="aboutMe-skill"><img src="./skills/next.png" alt="Next.js" /> Next.js</div>
           <div className="aboutMe-skill"><img src="./skills/node.png" alt="Node.js" /> Node.js</div>
+          <div className="aboutMe-skill"><img src="./skills/aws.svg" alt="AWS" /> AWS</div>
+          <div className="aboutMe-skill"><img src="./skills/flutter-original.svg" alt="Flutter" /> Flutter</div>
+          <div className="aboutMe-skill"><img src="./skills/spring-original.svg" alt="Spring Boot" /> Spring Boot</div>
+          <div className="aboutMe-skill"><img src="./skills/java-original.svg" alt="Java" /> Java</div>
+          <div className="aboutMe-skill"><img src="./skills/postgresql-original.svg" alt="PostgreSQL" /> PostgreSQL</div>
           <div className="aboutMe-skill"><img src="./skills/mongodb.png" alt="MongoDB" /> MongoDB</div>
+          <div className="aboutMe-skill"><img src="./skills/apachekafka-original.svg" alt="Kafka" /> Kafka</div>
+          <div className="aboutMe-skill"><img src="./skills/redis-original.svg" alt="Redis" /> Redis</div>
           <div className="aboutMe-skill"><img src="./skills/python.png" alt="Python" /> Python</div>
+          <div className="aboutMe-skill"><img src="./skills/javascript.png" alt="JavaScript" /> JavaScript</div>
+          <div className="aboutMe-skill"><img src="./skills/dart-original.svg" alt="Dart" /> Dart</div>
           <div className="aboutMe-skill"><img src="./skills/tailwind.png" alt="TailwindCSS" /> TailwindCSS</div>
           <div className="aboutMe-skill"><img src="./skills/scss.png" alt="CSS/SASS" /> CSS/SASS</div>
-          <div className="aboutMe-skill"><img src="./skills/flutter-original.svg" alt="Flutter" /> Flutter</div>
-          <div className="aboutMe-skill"><img src="./skills/dart-original.svg" alt="Dart" /> Dart</div>
-          <div className="aboutMe-skill"><img src="./skills/java-original.svg" alt="Java" /> Java</div>
-          <div className="aboutMe-skill"><img src="./skills/spring-original.svg" alt="Spring Boot" /> Spring Boot</div>
-          <div className="aboutMe-skill"><img src="./skills/postgresql-original.svg" alt="PostgreSQL" /> PostgreSQL</div>
-          <div className="aboutMe-skill"><img src="./skills/aws.svg" alt="AWS" /> AWS</div>
-          <div className="aboutMe-skill"><img src="./skills/redis-original.svg" alt="Redis" /> Redis</div>
-          <div className="aboutMe-skill"><img src="./skills/apachekafka-original.svg" alt="Kafka" /> Kafka</div>
         </div>
       </div>
       <div className="aboutMe-right">
