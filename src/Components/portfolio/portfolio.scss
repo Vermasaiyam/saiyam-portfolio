@@ -256,37 +256,44 @@
 
         .menuList {
             position: absolute;
-            top: calc(100% + 6px);
+            top: calc(100% + 8px);
             left: 0;
             min-width: 100%;
-            background: #1c1c22;
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            border-radius: 10px;
+            background: #14142b;
+            border: 1px solid rgba(255, 165, 0, 0.35);
+            border-radius: 12px;
             padding: 6px;
             display: flex;
             flex-direction: column;
             gap: 2px;
             z-index: 900;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+            box-shadow: 0 14px 40px rgba(0, 0, 0, 0.6);
 
             a {
                 white-space: nowrap;
-                padding: 9px 14px;
-                border-radius: 7px;
-                color: white;
+                padding: 10px 16px;
+                border-radius: 8px;
+                color: lightgray;
                 font-size: 14px;
+                transition: 0.2s;
 
-                &:hover { background: rgba(255, 165, 0, 0.15); }
+                &:hover { background: rgba(255, 165, 0, 0.18); color: orange; }
             }
         }
     }
+}
 
-    .more {
+// A sibling of .portfolio (not a child), so the sticky "My Projects" title
+// releases before this and never overlaps the "More Projects" heading.
+.more {
+    background-color: #0c0c1d;
+    padding: 20px 20px 120px;
+
+    .moreInner {
         max-width: 1100px;
         margin: 0 auto;
-        padding: 40px 20px 120px;
 
-        .moreInner h2 {
+        h2 {
             color: orange;
             font-size: 34px;
             margin-bottom: 30px;
@@ -294,52 +301,52 @@
 
             @include mobile { font-size: 24px; }
         }
+    }
 
-        .moreGrid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
+    .moreGrid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
 
-            @include mobile { grid-template-columns: 1fr; }
+        @include mobile { grid-template-columns: 1fr; }
 
-            .moreCard {
-                background: rgba(112, 128, 144, 0.12);
-                border: 1px solid rgba(255, 255, 255, 0.08);
-                border-radius: 14px;
-                padding: 22px;
+        .moreCard {
+            background: rgba(112, 128, 144, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 14px;
+            padding: 22px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+
+            h3 { font-size: 22px; color: white; }
+            p { color: gray; font-size: 15px; flex: 1; }
+
+            .tech {
                 display: flex;
-                flex-direction: column;
-                gap: 14px;
+                flex-wrap: wrap;
+                gap: 8px;
 
-                h3 { font-size: 22px; }
-                p { color: gray; font-size: 15px; flex: 1; }
-
-                .tech {
-                    display: flex;
-                    flex-wrap: wrap;
-                    gap: 8px;
-
-                    span {
-                        background-color: rgba(112, 128, 144, 0.282);
-                        padding: 5px 12px;
-                        border-radius: 20px 20px 20px 0;
-                        font-size: 12px;
-                    }
+                span {
+                    background-color: rgba(112, 128, 144, 0.282);
+                    padding: 5px 12px;
+                    border-radius: 20px 20px 20px 0;
+                    font-size: 12px;
                 }
+            }
 
-                a button {
-                    background-color: orange;
-                    border: none;
-                    border-radius: 10px;
-                    padding: 9px;
-                    width: 140px;
-                    cursor: pointer;
-                    font-size: 14px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    gap: 10px;
-                }
+            a button {
+                background-color: orange;
+                border: none;
+                border-radius: 10px;
+                padding: 9px;
+                width: 140px;
+                cursor: pointer;
+                font-size: 14px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
             }
         }
     }

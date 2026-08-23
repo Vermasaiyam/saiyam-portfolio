@@ -117,15 +117,19 @@ const Portfolio = () => {
   const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30 })
 
   return (
-    <div className='portfolio' ref={ref}>
-      <div className="progress">
-        <h1>My Projects</h1>
-        <motion.div style={{ scaleX }} className="progressBar"></motion.div>
+    <>
+      <div className='portfolio' ref={ref}>
+        <div className="progress">
+          <h1>My Projects</h1>
+          <motion.div style={{ scaleX }} className="progressBar"></motion.div>
+        </div>
+        {projects.map(item => (
+          <Single item={item} key={item.id} />
+        ))}
       </div>
-      {projects.map(item => (
-        <Single item={item} key={item.id} />
-      ))}
 
+      {/* Outside .portfolio so the sticky "My Projects" title releases before
+          this section, instead of overlapping its heading. */}
       <section className="more">
         <div className="moreInner">
           <h2>More Projects</h2>
@@ -143,7 +147,7 @@ const Portfolio = () => {
           </div>
         </div>
       </section>
-    </div>
+    </>
   )
 }
 
