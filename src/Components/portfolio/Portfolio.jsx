@@ -5,6 +5,17 @@ import { MdLaunch } from "react-icons/md";
 
 const items = [
   {
+    id: 6,
+    title: "Mehfil",
+    img: "./Mehfil.png",
+    desc: "Mehfil plays any YouTube, Spotify, Apple Music, JioSaavn, Gaana or Deezer playlist start to finish on one quiet screen — background audio, lock-screen controls, synced lyrics, and a library that syncs across devices. Built as a Next.js web app and a companion Flutter Android app sharing one backend.",
+    link: "https://mehfilmusic.vercel.app/",
+    code: "https://github.com/Vermasaiyam/player",
+    appCode: "https://github.com/Vermasaiyam/mehfil-app",
+    apk: "https://github.com/Vermasaiyam/mehfil-releases/releases/latest/download/mehfil.apk",
+    technologies: ["Next.js", "TypeScript", "React", "Zustand", "Firebase", "Flutter", "Dart", "Tailwind CSS"],
+  },
+  {
     id: 1,
     title: "QuizLab",
     img: "./QuizLab.png",
@@ -83,8 +94,18 @@ const Single = ({ item }) => {
             <div className="buttons">
               <a href={item.code} target='blank'><button>See Code<b>&lt; &gt;</b></button></a>
               {
+                item?.appCode && (
+                  <a href={item.appCode} target='blank'><button>App Code<b>&lt; &gt;</b></button></a>
+                )
+              }
+              {
                 item?.link && (
                   <a href={item?.link} target='blank'><button>Watch Live <MdLaunch /></button></a>
+                )
+              }
+              {
+                item?.apk && (
+                  <a href={item.apk} target='blank'><button>Download App <MdLaunch /></button></a>
                 )
               }
             </div>
