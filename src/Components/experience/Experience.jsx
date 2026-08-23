@@ -3,7 +3,8 @@ import './experience.scss'
 import { motion, useScroll, useSpring, useTransform } from 'framer-motion'
 import { MdLaunch, MdWork, MdLocationOn } from "react-icons/md";
 
-const SALESCODE_LOGO = "https://salescode.ai/wp-content/uploads/2025/09/logo_1.svg";
+// Local asset — the remote logo is hotlink-protected (403) and rendered broken.
+const SALESCODE_LOGO = "./salescode.png";
 
 // Reverse chronological — present first
 const items = [
